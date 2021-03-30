@@ -18,6 +18,15 @@ public class BuscarPessoa extends Activity implements OnClickListener {
 
         Button btBuscar = (Button) findViewById(R.id.btBuscar);
         btBuscar.setOnClickListener(this);
+
+        Button btCancelar = (Button) findViewById(R.id.btCancelar);
+        btCancelar.setOnClickListener(new OnClickListener() {
+            public void onClick(View view) {
+                setResult(RESULT_CANCELED);
+                // Fecha a tela
+                finish();
+            }
+        });
     }
 
     @Override
